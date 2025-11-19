@@ -1,10 +1,16 @@
 <div align="center">
 
-# 🧠✨ Case 1 — ACM + K-Means + Power BI  
-## Perfil dos Eleitores com Deficiência no Brasil  
-Análise Sociodemográfica, Geográfica e Multivariada
+# ✨📊 Case 1 — Perfil dos Eleitores com Deficiência  
+### ACM + K-Means + Power BI (Visual Futurista Neon)
 
-Este projeto apresenta uma investigação completa sobre o perfil dos **eleitores com deficiência** no Brasil, combinando técnicas estatísticas de ACM, clusterização K-Means e visualização futurista em Power BI.
+<img src="imgs/capa.png" width="900">
+
+---
+
+## 🔥 Dashboard Interativo  
+### *GIF demonstrando a navegação entre todas as páginas*
+
+<img src="imgs/case1_dashboard.gif" width="900">
 
 </div>
 
@@ -12,26 +18,16 @@ Este projeto apresenta uma investigação completa sobre o perfil dos **eleitore
 
 <div align="center">
 
-# 📌 1. Página 1 — Mapa Perceptual (ACM + K-Means)
+# 🎯 Objetivo do Projeto
 
-Nesta página, cada estado é posicionado em um espaço perceptual baseado nos **eixos da ACM**:  
-Dimensão Sociodemográfica e Perfil de Inclusão Regional.  
-A clusterização K-Means cria três grupos distintos, permitindo compreender padrões de similaridade.
+Este case apresenta uma análise completa do **perfil dos eleitores com deficiência no Brasil**, combinando:
 
-<img src="imgs/mapaperceptual.PNG" width="900">
+✨ Análise de Correspondência Múltipla (ACM)  
+✨ Clusterização com K-Means  
+✨ Construção de métricas e indicadores  
+✨ Dashboard premium com estética **neon futurista**  
 
-</div>
-
----
-
-<div align="center">
-
-# 📌 2. Página 2 — Análise Geográfica por Cluster
-
-A segunda página exibe o **Mapa do Brasil**, segmentado por cluster, permitindo análise territorial, comparações e identificação do **Top Estado**.  
-Essa visão reforça padrões regionais e diferenças entre grupos.
-
-<img src="imgs/mapabrasil.PNG" width="900">
+O estudo revela padrões de inclusão regional, perfis sociodemográficos e a segmentação dos estados brasileiros.
 
 </div>
 
@@ -39,24 +35,16 @@ Essa visão reforça padrões regionais e diferenças entre grupos.
 
 <div align="center">
 
-# 📌 3. Página 3 — Perfil Analítico do Cluster
+# 🧠 Tecnologias Utilizadas
 
-Aqui o usuário encontra a visão aprofundada de um cluster específico, incluindo KPIs principais, composição sociodemográfica, Delta vs Brasil e painéis descritivos.  
-A leitura final permite interpretar o comportamento do cluster de forma estratégica.
-
-<img src="imgs/perfil.png" width="900">
-
-</div>
-
----
-
-<div align="center">
-
-# 📌 4. Página Wiki e Documentação Interna
-
-A Wiki centraliza notas, descrições, interpretações e explicações auxiliares para a análise, permitindo consulta rápida durante o uso do dashboard.
-
-<img src="imgs/wiki.png" width="900">
+| Tecnologia | Uso |
+|-----------|-----|
+| **Python** | Pré-processamento + métricas + clusterização |
+| **ACM** | Mapa perceptual e variáveis fatoriais |
+| **K-Means** | Agrupamento dos estados |
+| **Power BI** | Visualização e storytelling |
+| **DAX** | KPIs e cálculos analíticos |
+| **Modelo Dimensional** | Esquema Estrela + Snowflake |
 
 </div>
 
@@ -64,27 +52,23 @@ A Wiki centraliza notas, descrições, interpretações e explicações auxiliar
 
 <div align="center">
 
-# 📌 5. Modelo Dimensional — Estrela + Snowflake
+# 🗂️ Bases de Dados
 
-O modelo foi estruturado usando Esquema Estrela com partes Snowflake para garantir redução de redundância e segmentações eficientes.  
-Essa modelagem viabiliza alta performance no Power BI.
+## **estados_metricas_final**
+Coordenadas da ACM, cluster final, métricas explicativas.
 
-<img src="imgs/esquema.PNG" width="900">
+## **dataset_powerbi_v3**
+Região, população, indicadores assistivos, atributos auxiliares.
 
-</div>
-
----
-
-<div align="center">
-
-# 📌 6. Tecnologias e Metodologia
-
-O case integra estatística, ciência de dados e BI:  
-Python para pré-processamento e modelagem;  
-ACM + K-Means para estruturação dos clusters;  
-Power BI com tema futurista neon para visualização;  
-DAX para cálculos dinâmicos;  
-Modelagem dimensional para performance analítica.
+## **df_obs (dados granulares)**
+Inclui:
+- Raça  
+- Faixa etária  
+- Gênero  
+- Escolaridade  
+- Estado civil  
+- Sinalizadores binários  
+Base essencial para medidas profundas no BI.
 
 </div>
 
@@ -92,10 +76,56 @@ Modelagem dimensional para performance analítica.
 
 <div align="center">
 
-# 📌 7. Design — Futurista Neon
+# 📊 Estrutura do Dashboard Futurista
 
-O dashboard aplica uma estética futurista com azul ciano, bordas luminosas, fundo escuro e layout geométrico.  
-Toda a experiência visual segue um padrão coerente, moderno e imersivo.
+---
+
+## 🟪 Página 1 — **Mapa Perceptual (ACM + K-Means)**  
+<img src="imgs/mapaperceptual.PNG" width="850">
+
+- Eixo sociademográfico × Eixo de inclusão regional  
+- Estados agrupados pelos clusters  
+- KPIs automáticos e filtros por região  
+
+---
+
+## 🟦 Página 2 — **Mapa Geográfico — Clusters por Estado**  
+<img src="imgs/mapabrasil.PNG" width="850">
+
+- Mapa por cluster  
+- Identificação do *Top Estado*  
+- % Médio PCD  
+- Visual com bordas neon customizadas  
+
+---
+
+## 🟨 Página 3 — **Perfil Analítico do Cluster**  
+<img src="imgs/perfil.png" width="850">
+
+- KPIs principais e secundários  
+- Composição do cluster  
+- Delta frente ao Brasil  
+- Perfil sociodemográfico interpretado  
+
+---
+
+## 📘 Página 4 — **Wiki / Glossário do Dashboard**  
+<img src="imgs/wiki.png" width="850">
+
+Inclui explicações sobre:
+- ACM  
+- K-Means  
+- Interpretação dos gráficos  
+- Esquema dimensional  
+
+---
+
+## 🧩 Modelo de Dados — Estrela + Snowflake  
+<img src="imgs/esquema.PNG" width="850">
+
+- Fato central: Estados  
+- Dimensões auxiliares: Região, Clusters, Wiki  
+- Estrutura híbrida para performance e escalabilidade  
 
 </div>
 
@@ -103,7 +133,25 @@ Toda a experiência visual segue um padrão coerente, moderno e imersivo.
 
 <div align="center">
 
-# ✍️ Autoria  
-**Cibelly Viegas — 2025**
+# 🎨 Estética e Design
+
+Tema aplicado:  
+✨ **Neon Cyber Blue**  
+📌 Bordas com brilho  
+📌 Fundo dark premium  
+📌 Layout modular  
+📌 Coerência visual entre páginas  
 
 </div>
+
+---
+
+<div align="center">
+
+# ✍️ Autoria
+
+**Cibelly Viegas**  
+Data Science & Analytics — 2025
+
+</div>
+
