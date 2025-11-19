@@ -1,10 +1,8 @@
 <div align="center">
 
 # 🧠✨ Case 1 — ACM + K-Means + Power BI  
-## Perfil dos Eleitores com Deficiência — Análise Sociodemográfica e Geográfica
-
-Dashboard futurista com insights digitais extraídos via Python + ACM + K-Means.  
-Mapas, clusters e storytelling visual integrado ao Power BI.
+## Perfil dos Eleitores com Deficiência no Brasil  
+Análise Sociodemográfica, Geográfica e Multivariada
 
 </div>
 
@@ -12,174 +10,141 @@ Mapas, clusters e storytelling visual integrado ao Power BI.
 
 <div align="center">
 
-## 🎯 Objetivo Geral
-
-Este projeto analisa o perfil dos **eleitores com deficiência no Brasil**, combinando:
-
-🔹 **ACM — Análise de Correspondência Múltipla**  
-🔹 **Clusterização — K-Means**  
-🔹 **Modelagem dimensional — Estrela + Snowflake**  
-🔹 **Dashboard interativo — Power BI (tema Futurista Neon)**  
-
-O objetivo é revelar padrões sociodemográficos, similaridades entre os estados e formar agrupamentos inteligentes (clusters) com base em eixos estatísticos da ACM.
+Este case apresenta uma análise completa sobre o perfil dos eleitores com deficiência no Brasil.  
+O projeto combina técnicas estatísticas de ACM (Análise de Correspondência Múltipla), clusterização K-Means e visualização interativa no Power BI, resultando em uma leitura clara e integrada sobre as similaridades entre estados, seus padrões demográficos e seus comportamentos dentro da inclusão eleitoral.
 
 </div>
 
 ---
 
-<div align="center">
+# 1. Base Granular — df_obs  
+A jornada começa pela base granular **df_obs**, que contém o nível mais detalhado das informações dos eleitores.  
+Nela estão os atributos sociodemográficos originais utilizados para calibrar e validar os eixos da ACM.
 
-# 1️⃣ Tecnologias Utilizadas
+Esses dados incluem:
 
-| Tecnologia | Descrição |
-|-----------|------------|
-| **Python** | Pré-processamento e modelagem |
-| **ACM (MCA)** | Redução dimensional e análise multivariada |
-| **K-Means** | Agrupamento automático dos estados |
-| **Power BI** | Dashboard profissional interativo |
-| **DAX** | Medidas analíticas |
-| **Esquema Estrela / Snowflake** | Modelagem dimensional |
+Faixa etária  
+Estado civil  
+Raça/cor  
+Gênero  
+Identidade de gênero  
+Escolaridade  
+Atributos derivados da ACM (Axis1 e Axis2)  
+Cluster numérico pré-modelo  
 
-</div>
+A df_obs funciona como a referência estatística do projeto, garantindo que o modelo multidimensional represente adequadamente a distribuição real dos eleitores.
 
----
-
-<div align="center">
-
-# 2️⃣ Visualizações do Dashboard
+<img src="imgs/wiki.png" width="800">
 
 ---
 
-### 📌 **Figura 1 — Perfil Analítico do Cluster (Página Perfil)**  
-<img src="imgs/perfil.png" width="900">
+# 2. Página 1 — Mapa Perceptual (ACM + K-Means)
 
----
+A análise visual inicia pelo **Mapa Perceptual**, que combina os dois principais eixos da ACM:
 
-### 📌 **Figura 2 — Mapa Perceptual (ACM + K-Means)**  
+Dimensão Sociodemográfica  
+Perfil de Inclusão Regional  
+
+Cada ponto representa um estado brasileiro.  
+As distâncias no gráfico expressam similaridade entre perfis, enquanto o algoritmo K-Means divide o espaço em **três clusters distintos**, agrupando estados que compartilham padrões semelhantes.
+
+A página também conta com filtros dinâmicos por Região e Cluster, além de indicadores como:
+
+- Estados Filtrados  
+- Clusters Ativos  
+
+Essa primeira visão revela a estrutura oculta dos dados e posiciona o Brasil em um mapa de similaridade social.
+
 <img src="imgs/mapaperceptual.PNG" width="900">
 
 ---
 
-### 📌 **Figura 3 — Mapa do Brasil por Cluster (Análise Geográfica)**  
+# 3. Página 2 — Análise Geográfica por Cluster
+
+Após entender o mapa perceptual, o usuário é direcionado ao **Mapa do Brasil**, que exibe cada estado colorido conforme o cluster ao qual pertence.  
+Essa página permite observar:
+
+A distribuição espacial dos clusters  
+O Top Estado dentro da seleção  
+O percentual médio de eleitores PCD  
+Tendências regionais  
+
+É aqui que percebemos padrões geográficos relevantes, como concentração de clusters em determinadas regiões e variações expressivas no percentual médio de PCD por UF.
+
 <img src="imgs/mapabrasil.PNG" width="900">
 
 ---
 
-### 📌 **Figura 4 — Modelo Dimensional (Estrela + Snowflake)**  
+# 4. Página 3 — Perfil Analítico do Cluster
+
+A terceira página consolida o storytelling ao aprofundar o perfil de um cluster específico.  
+Quando filtrado, o dashboard apresenta:
+
+KPIs principais (ex.: % Médio PCD por UF, Score Final do Cluster)  
+KPIs secundários (Total de Eleitores, Share do Cluster, Delta vs Brasil)  
+Distribuição sociodemográfica  
+Gênero predominante  
+Raça predominante  
+Composição do cluster  
+Gráficos analíticos e contextualização  
+Scatter ACM com destaque dos indivíduos daquele grupo  
+
+Essa visão oferece a interpretação final e estratégica do cluster, permitindo tomadas de decisão e insights profundos.
+
+<img src="imgs/perfil.png" width="900">
+
+---
+
+# 5. Wiki Interna e Documentação Analítica
+
+O projeto conta também com uma página auxiliar de **Wiki**, responsável por centralizar descrições dos clusters, definições de métricas, explicações das variáveis e lógica dos eixos da ACM.  
+É o espaço destinado a anotações e suporte à leitura analítica.
+
+<img src="imgs/wiki.png" width="900">
+
+---
+
+# 6. Modelo Dimensional — Estrela + Snowflake
+
+A estrutura de dados foi cuidadosamente modelada utilizando Esquema Estrela, garantindo performance, simplicidade e clareza.  
+Algumas dimensões foram normalizadas (Snowflake) para reduzir redundância e melhorar segmentações regionais.
+
+O modelo inclui:
+
+Fato_Estados  
+Dim_Estado  
+Dim_Região  
+Dim_Atributos_PCD  
+Derivações dos eixos da ACM  
+Atributos para visualizações e cálculos  
+
+A seguir está o diagrama completo do modelo:
+
 <img src="imgs/esquema.PNG" width="900">
 
 ---
 
-### 📌 **Figura Extra — Página Wiki / Documentação interna**  
-<img src="imgs/wiki.png" width="900">
+# 7. Tecnologias e Metodologia Integrada
 
-</div>
+O projeto combina três frentes principais:
 
----
-
-<div align="center">
-
-# 3️⃣ Estrutura das Bases
-
-O projeto utiliza duas tabelas principais:
-
-### ✔️ **estados_metricas_final**
-Contém:
-- Eixos da ACM  
-- Score final de cluster  
-- Indicadores derivados  
-- Perfil sociodemográfico  
-- Métricas utilizadas nos gráficos  
-
-### ✔️ **dataset_powerbi_v3**
-Contém:
-- Região  
-- Informações demográficas  
-- Indicadores assistivos  
-- Atributos complementares  
-
-</div>
+**Python** para pré-processamento, normalização, ACM, K-Means e criação dos scores.  
+**Power BI** para visualização futurista em tema Neon, com métricas DAX e navegação interativa.  
+**Modelagem Estatística** estruturada para explicar perfis e agrupar estados conforme similaridade social.
 
 ---
 
-<div align="center">
+# 8. Design e Estética — Tema Futurista Neon
 
-# 4️⃣ Modelo de Dados — Estrela + Snowflake
+Todo o dashboard foi construído com identidade visual própria:
 
-**FATO PRINCIPAL — Fato_Estados**
-- Métricas transformadas  
-- Resultado do K-Means  
-- Atributos derivados  
+Azul ciano sobre fundo escuro  
+Bordas luminosas  
+Componentes geométricos  
+Layout organizado em blocos temáticos  
+Visual moderno e coerente em todas as páginas  
 
-**DIMENSÕES**
-- Dim_Estado  
-- Dim_Região  
-- Dim_Atributos_PCD  
-
-**SNOWFLAKE**
-- Dimensões normalizadas para reduzir redundância  
-- Otimização de relacionamentos  
-- Base mais limpa e eficiente  
-
-</div>
-
----
-
-<div align="center">
-
-# 5️⃣ Estrutura do Dashboard
-
-## 📌 Página 1 — Mapa de Similaridade (ACM + K-Means)
-- Dispersão 2D com eixos da ACM  
-- Agrupamentos por cluster  
-- Filtros interativos (Região / Cluster)  
-- Cards: Estados filtrados, clusters ativos  
-
-## 📌 Página 2 — Mapa Geográfico por Cluster
-- Brasil segmentado por cluster  
-- Top Estado automático  
-- Métricas agregadas  
-- Paleta futurista em neon  
-
-## 📌 Página 3 — Perfil Analítico do Cluster
-- Principais KPIs  
-- Delta cluster vs Brasil  
-- Composição do cluster  
-- Gráficos futuristas  
-- Painéis analíticos explicativos  
-
-</div>
-
----
-
-<div align="center">
-
-# 6️⃣ Principais Medidas (DAX)
-
-- Estados Filtrados  
-- Clusters Ativos  
-- % Médio PCD por UF  
-- Score_Final_Cluster  
-- Atributos predominantes  
-- Eixos da ACM convertidos em medidas  
-- Tooltip dinâmico  
-
-</div>
-
----
-
-<div align="center">
-
-# 7️⃣ Design — Tema Futurista Neon
-
-✨ Paleta azul-ciano  
-✨ Fundo escuro suave  
-✨ Bordas luminosas  
-✨ Gráficos com brilho  
-✨ Layout geométrico limpo  
-✨ Experiência uniforme e profissional  
-
-</div>
+Essa estética reforça a sensação de tecnologia avançada e clareza visual.
 
 ---
 
