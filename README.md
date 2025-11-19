@@ -12,20 +12,7 @@ Este projeto apresenta uma investigação completa sobre o perfil dos **eleitore
 
 <div align="center">
 
-# 📌 1. Base Granular — df_obs
-
-A análise se fundamenta na base **df_obs**, que contém o nível mais detalhado das informações dos eleitores.  
-Esses dados estruturam os eixos da ACM e permitem validar estatisticamente os clusters.
-
-<img src="imgs/wiki.png" width="900">
-
-</div>
-
----
-
-<div align="center">
-
-# 📌 2. Página 1 — Mapa Perceptual (ACM + K-Means)
+# 📌 1. Página 1 — Mapa Perceptual (ACM + K-Means)
 
 Nesta página, cada estado é posicionado em um espaço perceptual baseado nos **eixos da ACM**:  
 Dimensão Sociodemográfica e Perfil de Inclusão Regional.  
@@ -39,7 +26,7 @@ A clusterização K-Means cria três grupos distintos, permitindo compreender pa
 
 <div align="center">
 
-# 📌 3. Página 2 — Análise Geográfica por Cluster
+# 📌 2. Página 2 — Análise Geográfica por Cluster
 
 A segunda página exibe o **Mapa do Brasil**, segmentado por cluster, permitindo análise territorial, comparações e identificação do **Top Estado**.  
 Essa visão reforça padrões regionais e diferenças entre grupos.
@@ -52,7 +39,7 @@ Essa visão reforça padrões regionais e diferenças entre grupos.
 
 <div align="center">
 
-# 📌 4. Página 3 — Perfil Analítico do Cluster
+# 📌 3. Página 3 — Perfil Analítico do Cluster
 
 Aqui o usuário encontra a visão aprofundada de um cluster específico, incluindo KPIs principais, composição sociodemográfica, Delta vs Brasil e painéis descritivos.  
 A leitura final permite interpretar o comportamento do cluster de forma estratégica.
@@ -65,7 +52,7 @@ A leitura final permite interpretar o comportamento do cluster de forma estraté
 
 <div align="center">
 
-# 📌 5. Página Wiki e Documentação Interna
+# 📌 4. Página Wiki e Documentação Interna
 
 A Wiki centraliza notas, descrições, interpretações e explicações auxiliares para a análise, permitindo consulta rápida durante o uso do dashboard.
 
@@ -77,7 +64,7 @@ A Wiki centraliza notas, descrições, interpretações e explicações auxiliar
 
 <div align="center">
 
-# 📌 6. Modelo Dimensional — Estrela + Snowflake
+# 📌 5. Modelo Dimensional — Estrela + Snowflake
 
 O modelo foi estruturado usando Esquema Estrela com partes Snowflake para garantir redução de redundância e segmentações eficientes.  
 Essa modelagem viabiliza alta performance no Power BI.
@@ -90,7 +77,7 @@ Essa modelagem viabiliza alta performance no Power BI.
 
 <div align="center">
 
-# 📌 7. Tecnologias e Metodologia
+# 📌 6. Tecnologias e Metodologia
 
 O case integra estatística, ciência de dados e BI:  
 Python para pré-processamento e modelagem;  
@@ -105,7 +92,7 @@ Modelagem dimensional para performance analítica.
 
 <div align="center">
 
-# 📌 8. Design — Futurista Neon
+# 📌 7. Design — Futurista Neon
 
 O dashboard aplica uma estética futurista com azul ciano, bordas luminosas, fundo escuro e layout geométrico.  
 Toda a experiência visual segue um padrão coerente, moderno e imersivo.
